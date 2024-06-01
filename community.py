@@ -26,7 +26,7 @@ class Community:
     Bounds save function to set community value to 1
   """
   
-  def __init__(self, matrix, distance):
+  def __init__(self, matrix, distance: int):
     """
     Constructor - initilize the community, find the neighbors, and mark the members
     
@@ -39,7 +39,7 @@ class Community:
       the distance from neighbors that should be counted in the community
       
     """
-    self.community = self.initilize_community(matrix)
+    self.community = self.initialize_community(matrix)
     self.neighbors = self.find_neighbors(matrix)
     self.build_community(distance)
 
@@ -52,7 +52,7 @@ class Community:
       total += sum(row)
     return total
   
-  def initilize_community(self, matrix):
+  def initialize_community(self, matrix):
     """
     Initilize the community to an all zero's matrix of the same size as the input matrix
     """
@@ -77,8 +77,7 @@ class Community:
     Find all the points that should be members of the community
     """
     for neighbor in self.neighbors:
-      row = neighbor[0]
-      col = neighbor[1]
+      row, col = neighbor
       self.flag(row,col)
 
       for n in range(0,distance):
@@ -99,8 +98,5 @@ class Community:
     """
     A bounds-safe setter for a member
     """
-    if row >= 0 and \
-      row < len(self.community) and \
-      col >= 0 and \
-      col < len(self.community[row]):
+    if 0 <= row < len(self.community) and 0 <= col < len(self.community[row]):
         self.community[row][col] = 1
