@@ -2,7 +2,7 @@
 
 This is a python3+pytest Koan that requires you to solve the Grid-Cell Neighborhoods problem. Update the methods in community.py to make the pytest tests in test_community.py pass. 
 
-## Prerequisits
+## Prerequisites
 
 - [Python](https://docs.python-guide.org/starting/installation/)
 - [Pipenv](https://pipenv.pypa.io/en/latest/installation.html)
