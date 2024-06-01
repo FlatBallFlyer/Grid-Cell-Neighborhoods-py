@@ -76,24 +76,16 @@ class Community:
       for n in range(0,distance):
         row-=1
         while row < neighbor[0]:
-          row+=1
-          col+=1
-          self.flag(row,col)
+          row+=1; col+=1; self.flag(row,col)
 
         while col > neighbor[1]:
-          row+=1
-          col-=1
-          self.flag(row,col)
+          row+=1; col-=1; self.flag(row,col)
 
         while row > neighbor[0]:
-          row-=1
-          col-=1
-          self.flag(row,col)
+          row-=1; col-=1; self.flag(row,col)
 
         while col < neighbor[1]:
-          row-=1
-          col+=1
-          self.flag(row,col)
+          row-=1; col+=1; self.flag(row,col)
     
   def flag(self, row, col):
     """
