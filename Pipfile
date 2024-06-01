@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+# Install dependencies
+install = "pipenv sync"
+# Run the unit tests
+unittest = "python3 -m unittest"
+
+[packages]
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
