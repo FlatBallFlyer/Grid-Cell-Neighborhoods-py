@@ -4,7 +4,7 @@ class Community:
     # TODO: Initilize Community
     return
 
-  def getCount(self):
+  def get_count(self):
     """
     Get the number of members in the community.
     """

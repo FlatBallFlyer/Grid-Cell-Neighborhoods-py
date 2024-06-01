@@ -18,7 +18,7 @@ class TestCommunity(unittest.TestCase):
       [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ]
     community = Community(matrix, 3)
-    self.assertEqual(community.getCount(), 25)
+    self.assertEqual(community.get_count(), 25)
 
   def test_left_edge(self):
     matrix = [
@@ -35,7 +35,7 @@ class TestCommunity(unittest.TestCase):
       [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ]
     community = Community(matrix, 3)
-    self.assertEqual(community.getCount(), 21)
+    self.assertEqual(community.get_count(), 21)
 
   def test_right_edge(self):
     matrix = [
@@ -52,7 +52,7 @@ class TestCommunity(unittest.TestCase):
       [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ]
     community = Community(matrix, 3)
-    self.assertEqual(community.getCount(), 17)
+    self.assertEqual(community.get_count(), 17)
 
   def test_small(self):
     matrix = [
@@ -69,7 +69,7 @@ class TestCommunity(unittest.TestCase):
       [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ]
     community = Community(matrix, 2)
-    self.assertEqual(community.getCount(), 13)
+    self.assertEqual(community.get_count(), 13)
 
   def test_separate(self):
     matrix = [
@@ -86,7 +86,7 @@ class TestCommunity(unittest.TestCase):
       [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ]
     community = Community(matrix, 2)
-    self.assertEqual(community.getCount(), 26)
+    self.assertEqual(community.get_count(), 26)
 
   def test_overlap(self):
     matrix = [
@@ -103,7 +103,7 @@ class TestCommunity(unittest.TestCase):
       [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ]
     community = Community(matrix, 2)
-    self.assertEqual(community.getCount(), 22)
+    self.assertEqual(community.get_count(), 22)
 
   def test_wide(self):
     matrix = [
@@ -114,7 +114,7 @@ class TestCommunity(unittest.TestCase):
       [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ]
     community = Community(matrix, 2)
-    self.assertEqual(community.getCount(), 23)
+    self.assertEqual(community.get_count(), 23)
 
   def test_tiny(self):
     matrix = [
@@ -125,7 +125,7 @@ class TestCommunity(unittest.TestCase):
       [ 0, 0, 0, 0, 0]
     ]
     community = Community(matrix, 1)
-    self.assertEqual(community.getCount(), 5)
+    self.assertEqual(community.get_count(), 5)
 
   def test_full(self):
     matrix = [
@@ -136,7 +136,7 @@ class TestCommunity(unittest.TestCase):
       [ 0, 0, 0, 0, 0]
     ]
     community = Community(matrix, 4)
-    self.assertEqual(community.getCount(), 25)
+    self.assertEqual(community.get_count(), 25)
 
   def test_sneaky(self):
     matrix = [
@@ -147,4 +147,4 @@ class TestCommunity(unittest.TestCase):
       [ 0, 0,-1, 0, 0]
     ]
     community = Community(matrix, 2)
-    self.assertEqual(community.getCount(), 8)
+    self.assertEqual(community.get_count(), 8)
