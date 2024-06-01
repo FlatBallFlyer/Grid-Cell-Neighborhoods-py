@@ -16,6 +16,14 @@ class Community:
     Constructor
   get_count()
     Returns the number of members in the community.
+  initilize_community
+    Return a matrix of 0's the same size as the input matrix
+  find_neighbors
+    Return a list of row,col coordinates of all matrix values > 0
+  build_community
+    Spiral out from neighbors setting community values to 1
+  flag
+    Bounds save function to set community value to 1
   """
   
   def __init__(self, matrix, distance):
