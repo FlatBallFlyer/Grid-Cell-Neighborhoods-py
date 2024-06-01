@@ -17,6 +17,13 @@ pipenv run install
 pipenv run unittest
 ```
 
+## Solution
+This solution works by 
+- Creating a community matrix of all 0s the same size as the input matrix
+- Find all the anchor neighbors
+- For each neighbor, spiral outward up to distance setting the community matrix value to 1
+- The get_count method just sums up the community matrix.
+
 ## Instructions
 The community constructor is provided with a matrix and a distance. The matrix is a 2-dimensional array of numbers. Numbers > zero indicate neighbors that will anchor communities. 
 
