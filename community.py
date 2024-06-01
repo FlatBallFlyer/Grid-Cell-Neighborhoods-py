@@ -23,7 +23,7 @@ class Community:
   build_community
     Spiral out from neighbors setting community values to 1
   flag
-    Bounds save function to set community value to 1
+    Bounds safe function to set community value to 1
   """
   
   def __init__(self, matrix, distance: int):
