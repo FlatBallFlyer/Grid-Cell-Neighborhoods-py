@@ -76,23 +76,18 @@ class Community:
     """
     Find all the points that should be members of the community
     """
+    directions = ((1,1),(1,-1),(-1,-1),(-1,1))
     for neighbor in self.neighbors:
       row, col = neighbor
       self.flag(row,col)
 
-      for n in range(0,distance):
+      for size in range(2,distance+2):
         row-=1
-        while row < neighbor[0]:
-          row+=1; col+=1; self.flag(row,col)
-
-        while col > neighbor[1]:
-          row+=1; col-=1; self.flag(row,col)
-
-        while row > neighbor[0]:
-          row-=1; col-=1; self.flag(row,col)
-
-        while col < neighbor[1]:
-          row-=1; col+=1; self.flag(row,col)
+        for direction in directions:
+          for n in range(1,size):
+            row += direction[0]
+            col += direction[1]
+            self.flag(row,col)
     
   def flag(self, row, col):
     """
